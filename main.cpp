@@ -13,7 +13,7 @@ int main(){
         double r{0};
         double t{0};
         double v{0};
-        char type{};
+        char type{'\0'};
         bool continue_loop{true};
 
         std::cout<< "Welcome to the European Options Price Calculator\n\n This Calculator follows the Black-Scholes Model to calculate the prices of European Call and put options\n\n More information can be found at this link: https://www.investopedia.com/terms/b/blackscholes.asp \n\n"<<std::endl;
