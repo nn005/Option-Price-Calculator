@@ -2,11 +2,15 @@
 #include "Put.cpp"
 #include "BlackScholes.cpp"
 #include <iostream>
-
+//including all the supporting files
 
 int main(){
 
+    //Contained in while loop to loop the calculator functionality
+
     while(true){
+
+        //Declare Variables that we will ask the user to input
 
         double SP{0};
         double ST{0};
@@ -36,6 +40,10 @@ int main(){
         std::cout<<"Do You Want to Calculate a Call or a Put? (Enter c or p)";
         std::cin>>type;
 
+        //Depending on if user wishes to calculate the price of a Call or a Put,
+        //We declare the nessecary instance of the call or put class and use its
+        //member function to calculate and return its price
+
         if (type == 'c' || type == 'C'){
             Call new_call{SP, ST, r, t, v};
             std::cout<<"The price for the Call is: "<< new_call.Call_Price()<<std::endl;
@@ -48,6 +56,7 @@ int main(){
             return 0;
         }
 
+        //Asks the user whether they wish to use another calculation or not
         std::cout<<"Do you want to do another calculation? (1 or 0): ";
         std::cin>>continue_loop;
         std::cout<<std::endl;

@@ -2,6 +2,7 @@
 
 #include <iostream>
 
+//Main Constructor sets protected variables to user input
 BlackScholes::BlackScholes( double stock_price, double strike_price, double interest_rate, double time, double volatility ){
 
     this->stock_price = stock_price;
@@ -13,6 +14,7 @@ BlackScholes::BlackScholes( double stock_price, double strike_price, double inte
 
 }
 
+//Default Constructor
 BlackScholes::BlackScholes(){
 
     this->stock_price = 0;

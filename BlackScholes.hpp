@@ -4,9 +4,15 @@
 #include <iostream>
 #include <cmath>
 
+
+//Declaring and Defining the BlackScholes base class
 class BlackScholes {
 
     public:
+
+    //Default and Main Constructors
+
+    //No destructor used because no dynamically allocated memory used
 
     BlackScholes();
 
@@ -14,6 +20,9 @@ class BlackScholes {
 
 
     protected:
+
+        //Protected Variables that will be inputted by user and declared 
+        //as protected so that clases that inherit them can access them
 
         double stock_price;
 
