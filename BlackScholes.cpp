@@ -12,6 +12,7 @@ BlackScholes::BlackScholes( double stock_price, double strike_price, double inte
     this->volatility = volatility/100;
 
 
+
 }
 
 //Default Constructor

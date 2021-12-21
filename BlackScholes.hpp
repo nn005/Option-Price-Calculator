@@ -9,6 +9,7 @@
 class BlackScholes {
 
     public:
+    
 
     //Default and Main Constructors
 

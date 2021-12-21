@@ -15,6 +15,7 @@ BlackScholes{ stock_price,  strike_price,  interest_rate,  time,  volatility}
 
 }
 
+
 double Call::Call_Price(){
 
     //Uses Private member variable and Black-Scholes Call formula to calculate the price of an option call

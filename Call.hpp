@@ -16,6 +16,7 @@ class Call: public BlackScholes{
         double Call_Price();
 
 
+
     private:
 
         //Private variables pertinent to calculation

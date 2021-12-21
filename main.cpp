@@ -10,6 +10,7 @@ int main(){
 
     while(true){
 
+
         //Declare Variables that we will ask the user to input
 
         double SP{0};

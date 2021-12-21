@@ -19,6 +19,7 @@ BlackScholes{stock_price, strike_price, interest_rate, time, volatility}
 
 }
 
+
 double Put::Put_Price(){
 
     //Uses Private member variable and Black-Scholes Put formula to calculate the price of an option put

@@ -17,6 +17,8 @@ class Put: public BlackScholes{
         double Put_Price();
 
 
+
+
     private:
 
         //Private variables pertinent to calculation
