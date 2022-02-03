@@ -1,12 +1,17 @@
 #include "Call.cpp"
 #include "Put.cpp"
 #include "BlackScholes.cpp"
+#include "linked_list.cpp"
 #include <iostream>
 //including all the supporting files
 
 int main(){
 
     //Contained in while loop to loop the calculator functionality
+
+    std::cout<< "Welcome to the European Options Price Calculator\n\n This Calculator follows the Black-Scholes Model to calculate the prices of European Call and put options\n\n More information can be found at this link: https://www.investopedia.com/terms/b/blackscholes.asp \n\n"<<std::endl;
+
+    LinkedList *new_list = new LinkedList();
 
     while(true){
 
@@ -20,8 +25,6 @@ int main(){
         double v{0};
         char type{'\0'};
         bool continue_loop{true};
-
-        std::cout<< "Welcome to the European Options Price Calculator\n\n This Calculator follows the Black-Scholes Model to calculate the prices of European Call and put options\n\n More information can be found at this link: https://www.investopedia.com/terms/b/blackscholes.asp \n\n"<<std::endl;
 
         std::cout<<"To begin, Enter the Stock Price: ";
         std::cin>>SP;
@@ -48,22 +51,40 @@ int main(){
         if (type == 'c' || type == 'C'){
             Call new_call{SP, ST, r, t, v};
             std::cout<<"The price for the Call is: "<< new_call.Call_Price()<<std::endl;
+
+            new_list->insert(new Node(new_call.Call_Price(), 'C'));
+            
         }
         else if(type == 'p' || type == 'P'){
             Put new_put{SP, ST, r, t, v};
             std::cout<<"The price for the Put is: "<< new_put.Put_Price()<<std::endl;
+
+            new_list->insert(new Node(new_put.Put_Price(), 'P'));
         }
         else{
             return 0;
         }
+
+        std::cout<<std::endl;
+        std::cout<<std::endl;
+        std::cout<<"Calculation History"<<std::endl;
+        new_list->print();
+        
+        std::cout<<std::endl;
+        std::cout<<std::endl;
+        std::cout<<std::endl;
+
 
         //Asks the user whether they wish to use another calculation or not
         std::cout<<"Do you want to do another calculation? (1 or 0): ";
         std::cin>>continue_loop;
         std::cout<<std::endl;
 
-        if(continue_loop == false)
+        //check destructor syntax and make pushes
+        if(continue_loop == false){
             return 0;
+        }
+
         
 
     }
